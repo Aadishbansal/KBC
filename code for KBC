@@ -1,0 +1,1509 @@
+#include<stdio.h>
+#include<string.h>
+#include<process.h>
+int main()
+{
+	system("COLOR 3A");
+	int wonMoney=0,checkpoint=0;
+	int ans,y,z,an; char a[15];
+	int fifty_fifty=1;
+	int audience_poll=1;
+	int expert_advice=1;
+	char k[20];
+	printf("                                                   !!!    WELCOME TO KBC    !!!            \n\n");
+	printf("\tPlease tell me your name - ");
+	scanf("%[^\n]s",&k);
+	printf("Hello %s ! ",k);
+	printf(" Now before starting,i want to tell you some rules:\n\n1. Here are 14 questions in the game.You have to answer all the questions to win the game.\n\n2. There are two check points in the game at Q.3 and Q.7. \n\n3 If you give all the answers correct,you can win 7 crore rupees.\n\n");
+	printf("             ARE YOU READY TO TEST YOURSELF  \n");
+	printf("                     YES or NO                     \n\n\n");
+	scanf("%s",a);
+	strcpy(a,strlwr(a));
+	if(strcmp(a,"yes")==0)
+	{
+		printf("\t\tHere is the question for 5000 rupees. \n\n\n");
+		printf(" Q.1 THE LANGUAGE OF LAKSHAWADEEP (A UNION TERRITORY OF INDIA) IS _________.\n");
+		printf("1. MALYALAM\n2. HINDI\n3. TELUGU\n4. KANNAD\n\n");
+		printf("do u want to use anylife line,if yes please enter 1 otherwise any other no\n");
+		scanf("%d",&y);
+		if(y==1)
+		{
+		returnq1:	printf("which lifeline do u want to choose? press 1 for fifty fifty,2 for expert advice,3 for audience poll\n");
+			scanf("%d",&z);
+			if(z==1 && fifty_fifty != 0)
+			{
+				fifty_fifty=0;
+				printf("1. MALYALAM \n2. KANNAD\n\n");
+				printf("\tEnter the option no.");
+				scanf("%d",&an);
+				if(an==1)
+				{	
+					printf("Your ans is correct..You have won 5,000 rupees.\n\n");
+					wonMoney += 5000;
+				}
+				else
+				{
+					printf("sorry, the correct answer is MALAYALAM. \n\nyou are out of the game");
+					printf("You Won %d",checkpoint);
+					exit(0);
+				}
+			
+			}
+			else if(z==2 && expert_advice !=0)
+			{
+				expert_advice=0;
+				printf("i think correct ans. is MALAYALAM, but not sure\n\n");
+				printf("\tEnter the option no.\n");
+				scanf("%d",&an);
+				if(an==1)			
+				{
+					printf("Your ans is correct..You have won 5,000 rupees.\n\n");
+					wonMoney+= 5000;
+				}
+				else
+				{
+					printf("sorry, the correct answer is MALAYALAM. you are out of the game");
+					printf("You Won %d",checkpoint);
+					exit(0);
+				}
+			
+			}
+			else if(z==3 && audience_poll!=0)
+			{
+				audience_poll=0;
+				printf("1. MALYALAM = 48%\n2. HINDI =12%\n3. TELUGU = 5%\n4. KANNAD = 35% \n\n");
+				printf("\tEnter the option no.");
+				scanf("%d",&an);
+				if(an==1)
+				{
+					printf("Your ans is correct..You have won 5,000 rupees.\n\n");
+					wonMoney +=5000;
+				}
+		  		else
+				{
+					printf("sorry, the correct answer is MALAYALAM. \n\nyou are out of the game");
+					printf("You Won %d",checkpoint);
+					exit(0);
+				}		
+			}
+			else
+			{
+				printf("You have already Used This LifeLine \n");
+				goto returnq1;
+			}
+		}
+		else
+		{				
+			printf("\tEnter the option no.");
+			scanf("%d",&an);
+			if(an==1)		
+			{
+			printf("Your ans is correct..You have won 5,000 rupees.\n\n");
+			wonMoney += 5000;
+			}
+			else
+			{
+			printf("Sorry correct answer is malayalam.You are out of game.");
+			printf("You Won %d",checkpoint);
+			exit(0);
+			}
+		}
+		printf(" Q.2 WHICH IS THE DEEPEST POINT IN THE WORLD?  \n");
+		printf("1. BERMUDA TRIANGLE\n2. BAY OF BENGAL \n3. MARINA TRENCH\n4. PACIFIC GULF\n\n");
+		if(fifty_fifty==1&&audience_poll==1&&expert_advice==1)
+		printf("You have all three lifelines left\n.");
+		else if(fifty_fifty==1&&audience_poll==1&&expert_advice==0)
+		printf("You have 2 lifelines left(fifty fifty and audience poll).\n");
+		else if(fifty_fifty==1&&audience_poll==0&&expert_advice==1)
+		printf("You have 2 lifelines left(fifity fifty and expert advice).\n");
+		else if(fifty_fifty==1&&audience_poll==0&&expert_advice==0)
+		printf("You have 1 lifelines left(fifty fifty).\n");
+		else if(fifty_fifty==0&&audience_poll==1&&expert_advice==1)
+		printf("You have 2 lifelines left(audience poll and expert advice).\n");
+		else if(fifty_fifty==0&&audience_poll==1&&expert_advice==0)
+		printf("You have 1 lifelines left(audience poll).\n");
+		else if(fifty_fifty==0&&audience_poll==0&&expert_advice==1)
+		printf("You have 1 lifelines left(expert advice).\n");
+		else
+		printf("You have no lifelines left.\n");
+		if(fifty_fifty !=0 || audience_poll!=0 || expert_advice!=0)
+		{	
+		returnq2:	 printf("do u want to use anylife line,if yes please enter 1 otherwise any other no\n");
+		scanf("%d",&y);
+		}
+		if(y==1)
+		{
+		printf("which lifeline do u want to choose?press 1 for fifty fifty,2 for expert advice,3 for audience poll\n");
+		scanf("%d",&z);
+			if(z==1 && fifty_fifty != 0)
+		{
+			fifty_fifty=0;
+			printf("2. BAY OF BENGAL \n3. MARINA TRENCH\n\n");
+			printf("\tEnter the option no.");
+			scanf("%d",&an);
+			if(an==3)
+			{	
+				printf("Your ans is correct..You have won 10,000 rupees.\n\n");
+				wonMoney += 5000;
+			}
+			else
+			{
+				printf("sorry, the correct answer is MARINA TRENCH. \n\nyou are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}
+			
+		}
+		else if(z==2 && expert_advice !=0)
+		{
+			expert_advice=0;
+			printf("i think correct ans. is MARINA TRENCH, but not sure\n\n");
+			printf("\tEnter the option no.\n");
+			scanf("%d",&an);
+			if(an==3)			
+			{
+				printf("Your ans is correct..You have won 10,000 rupees.\n\n");
+				wonMoney+= 5000;
+			}
+			else
+			{
+				printf("sorry, the correct answer is MARINA TRENCH. you are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}
+			
+		}
+		else if(z==3 && audience_poll != 0)
+		{
+			audience_poll=0;
+			printf("1. BERMUDA TRIANGLE= 28%\n2. BAY OF BENGAL =10%\n3. MARINA TRENCH = 45%\n4. PACIFIC GULF=17% \n\n");
+			printf("\tEnter the option no.");
+			scanf("%d",&an);
+			if(an==3)
+			{
+				printf("Your ans is correct..You have won 10,000 rupees.\n\n");
+				wonMoney +=5000;}
+		  	else
+			{
+				printf("sorry, the correct answer is MARINA TRENCH. \n\nyou are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}	
+		}
+		else
+			{
+				printf("You have already Used This LifeLine \n");
+				goto returnq2;
+			}
+}
+else
+{	
+	{
+	printf("\tEnter the option no.");}
+	scanf("%d",&an);
+	if(an==3)		
+		{
+		printf("Your ans is correct..You have won 10,000 rupees.\n\n");
+		wonMoney += 5000;
+		}
+	else
+		{
+		printf("Sorry correct answer is MARINA TRENCH.You are out of game.");
+		printf("You Won %d",checkpoint);
+		exit(0);
+		}
+}
+		printf(" Q.3 WHICH IS THE STATE BIRD OF RAJASTHAN?\n ");		
+		printf("1. PEACOCK \n2. GODAWAN\n3. SPARROW\n4. EAGLE\n\n ");
+		if(fifty_fifty==1&&audience_poll==1&&expert_advice==1)
+		printf("You have all three lifelines left.\n");
+		else if(fifty_fifty==1&&audience_poll==1&&expert_advice==0)
+		printf("You have 2 lifelines left(fifty fifty and audience poll0.\n");
+		else if(fifty_fifty==1&&audience_poll==0&&expert_advice==1)
+		printf("You have 2 lifelines left(fifity fifty and expert advice).\n");
+		else if(fifty_fifty==1&&audience_poll==0&&expert_advice==0)
+		printf("You have 1 lifelines left(fifty fifty).\n");
+		else if(fifty_fifty==0&&audience_poll==1&&expert_advice==1)
+		printf("You have 2 lifelines left(audiernce poll and expert advice).\n");
+		else if(fifty_fifty==0&&audience_poll==1&&expert_advice==0)
+		printf("You have 1 lifelines left(audience poll).\n");
+		else if(fifty_fifty==0&&audience_poll==0&&expert_advice==1)
+		printf("You have 1 lifelines left(expert advice).\n");
+		else
+		printf("You have no lifelines left.\n");
+		y=0;
+		if(fifty_fifty !=0 || audience_poll!=0 || expert_advice!=0)
+		{	
+		returnq3: printf("do u want to use anylife line,if yes please enter 1 otherwise any other no\n");
+		scanf("%d",&y);
+		}
+		if(y==1)
+		{
+		 printf("which lifeline do u want to choose?press 1 for fifty fifty,2 for expert advice,3 for audience poll\n");
+		scanf("%d",&z);
+		if(z==1 && fifty_fifty!=0)
+		{
+			fifty_fifty=0;
+			printf("2. GODAWAN \n4.EAGLE\n\n");
+			printf("\tEnter the option no.");
+			scanf("%d",&an);
+			if(an==2)
+			{	
+				printf("Your ans is correct..You have won 20,000 rupees.\n\n");
+				wonMoney += 10000;
+			}
+			else
+			{
+				printf("sorry, the correct answer is GODAWAN. \n\nyou are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}
+			
+		}
+		else if(z==2 && expert_advice!=0)
+		{
+			expert_advice=0;
+			printf("i think correct ans. is GODAWAN, but not sure\n\n");
+			printf("\tEnter the option no.\n");
+			scanf("%d",&an);
+			if(an==2)			
+			{
+				printf("Your ans is correct..You have won 20,000 rupees.\n\n");
+				wonMoney+= 10000;
+			}
+			else
+			{
+				printf("sorry, the correct answer is GODAWAN. you are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}
+			
+		}
+		else if(z==3 && audience_poll!=0)
+		{
+			audience_poll=0;
+			printf("1. PEACOCK= 30%\n2. GODAWAN =42%\n3. SPARROW = 15%\n4. EAGLE=13% \n\n");
+			printf("\tEnter the option no.");
+			scanf("%d",&an);
+			if(an==2)
+			{
+				printf("Your ans is correct..You have won 20,000 rupees.\n\n");
+				wonMoney +=10000;}
+		  	else
+			{
+				printf("sorry, the correct answer is GODAWAN. \n\nyou are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}	
+		}
+		
+		else
+		{
+			printf("You have already Used This Lifeline\n");
+			goto returnq3;
+		}
+}
+else
+{	
+	{
+	printf("\tEnter the option no.");}
+	scanf("%d",&an);
+	if(an==2)		
+		{
+		printf("Your ans is correct..You have won 20,000 rupees.\n\n");
+		wonMoney += 10000;
+		}
+	else
+		{
+		printf("Sorry correct answer is GODAWAN.You are out of game.");
+		printf("You Won %d",checkpoint);
+		exit(0);
+		}
+}
+		printf(" Q.4 WHAT DO THE FIVE RINGS OF THE OLYMPICS REPRESENT? \n");
+		printf("1. FIVE CONTINENTS\n2. FIVE GAMES \n3. FIVE LANGUAGES\n4. FIVE OCEANS\n\n");
+		if(fifty_fifty==1&&audience_poll==1&&expert_advice==1)
+		printf("You have all three lifelines left.\n");
+		else if(fifty_fifty==1&&audience_poll==1&&expert_advice==0)
+		printf("You have 2 lifelines left(fifty fifty and audience poll0.\n");
+		else if(fifty_fifty==1&&audience_poll==0&&expert_advice==1)
+		printf("You have 2 lifelines left(fifity fifty and expert advice).\n");
+		else if(fifty_fifty==1&&audience_poll==0&&expert_advice==0)
+		printf("You have 1 lifelines left(fifty fifty).\n");
+		else if(fifty_fifty==0&&audience_poll==1&&expert_advice==1)
+		printf("You have 2 lifelines left(audiernce poll and expert advice).\n");
+		else if(fifty_fifty==0&&audience_poll==1&&expert_advice==0)
+		printf("You have 1 lifelines left(audience poll).\n");
+		else if(fifty_fifty==0&&audience_poll==0&&expert_advice==1)
+		printf("You have 1 lifelines left(expert advice).\n");
+		else
+		printf("You have no lifelines left.\n");
+		y=0;
+		checkpoint+=20000;
+		if(fifty_fifty !=0 || audience_poll!=0 || expert_advice!=0)
+		{	
+		printf("do u want to use anylife line,if yes please enter 1 otherwise any other no\n");
+		scanf("%d",&y);
+		
+	}
+		if(y==1)
+		{
+		returnq4: printf("which lifeline do u want to choose?press 1 for fifty fifty,2 for expert advice,3 for audience poll\n");
+		scanf("%d",&z);
+		if(z==1 && fifty_fifty != 0)
+		{
+			fifty_fifty=0;
+			printf("1. FIVE CONTINENTS \n4.FIVE OCEANS\n\n");
+			printf("\tEnter the option no.");
+			scanf("%d",&an);
+			if(an==1)
+			{	
+				printf("Your ans is correct..You have won 40,000 rupees.\n\n");
+				wonMoney += 20000;
+			}
+			else
+			{
+				printf("sorry, the correct answer is FIVE CONTINENTS. \n\nyou are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}
+			
+		}
+		else if(z==2 && expert_advice !=0)
+		{
+			expert_advice=0;
+			printf("i think correct ans. is FIVE CONTINENTS, but not sure\n\n");
+			printf("\tEnter the option no.\n");
+			scanf("%d",&an);
+			if(an==1)			
+			{
+				printf("Your ans is correct..You have won 40,000 rupees.\n\n");
+				wonMoney+= 20000;
+			}
+			else
+			{
+				printf("sorry, the correct answer is FIVE CONTINENTS. you are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}
+			
+		}
+		else if(z==3 && audience_poll != 0)
+		{
+			audience_poll=0;
+			printf("1. FIVE CONTINENTS= 43%\n2. FIVE GAMES =12%\n3. FIVE LANGUAGES = 25%\n4. FIVE OCEANS=20% \n\n");
+			printf("\tEnter the option no.");
+			scanf("%d",&an);
+			if(an==1)
+			{
+				printf("Your ans is correct..You have won 40,000 rupees.\n\n");
+				wonMoney +=20000;}
+		  	else
+			{
+				printf("sorry, the correct answer is FIVE CONTINENTS. \n\nyou are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}	
+		}
+		
+		else
+		{
+			printf("You have already Used This Lifeline\n");
+			goto returnq4;
+		}
+}
+else
+{	
+	{
+	printf("\tEnter the option no.");}
+	scanf("%d",&an);
+	if(an==1)		
+		{
+		printf("Your ans is correct..You have won 40,000 rupees.\n\n");
+		wonMoney += 20000;
+		}
+	else
+		{
+		printf("Sorry correct answer is FIVE CONTINENTS.You are out of game.");
+		printf("You Won %d",checkpoint);
+		exit(0);
+		}
+}
+		printf(" Q.5 THE NATIONAL REGISTER OF CITIZEN (NRC) IS THE LIST OF INDIAN CITIZENS OF WHICH STATE?\n");
+		printf("1. SIKKIM\n2.MEGHALAYA\n3.ARUNACHAL PRADESH\n4.ASSAM\n\n");
+		if(fifty_fifty==1&&audience_poll==1&&expert_advice==1)
+		printf("You have all three lifelines left.\n");
+		else if(fifty_fifty==1&&audience_poll==1&&expert_advice==0)
+		printf("You have 2 lifelines left(fifty fifty and audience poll0.\n");
+		else if(fifty_fifty==1&&audience_poll==0&&expert_advice==1)
+		printf("You have 2 lifelines left(fifity fifty and expert advice).\n");
+		else if(fifty_fifty==1&&audience_poll==0&&expert_advice==0)
+		printf("You have 1 lifelines left(fifty fifty).\n");
+		else if(fifty_fifty==0&&audience_poll==1&&expert_advice==1)
+		printf("You have 2 lifelines left(audiernce poll and expert advice).\n");
+		else if(fifty_fifty==0&&audience_poll==1&&expert_advice==0)
+		printf("You have 1 lifelines left(audience poll).\n");
+		else if(fifty_fifty==0&&audience_poll==0&&expert_advice==1)
+		printf("You have 1 lifelines left(expert advice).\n");
+		else
+		printf("You have no lifelines left.\n");
+		y=0;
+		if(fifty_fifty !=0 || audience_poll!=0 || expert_advice!=0)
+		{	
+		printf("do u want to use anylife line,if yes please enter 1 otherwise any other no\n");
+		scanf("%d",&y);
+		}
+		if(y==1)
+		{
+		returnq5: printf("which lifeline do u want to choose?press 1 for fifty fifty,2 for expert advice,3 for audience poll\n");
+		scanf("%d",&z);
+		if(z==1 && fifty_fifty != 0)
+		{
+			fifty_fifty=0;
+			printf("2.MEGHALAYA \n4.ASSAM\n\n");
+			printf("\tEnter the option no.");
+			scanf("%d",&an);
+			if(an==4)
+			{	
+				printf("Your ans is correct..You have won 80,000 rupees.\n\n");
+				wonMoney += 40000;
+			}
+			else
+			{
+				printf("sorry, the correct answer is ASSAM. \n\nyou are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}
+			
+		}
+		else if(z==2 && expert_advice !=0)
+		{
+			expert_advice=0;
+			printf("i think correct ans. is ASSAM, but not sure\n\n");
+			printf("\tEnter the option no.\n");
+			scanf("%d",&an);
+			if(an==4)			
+			{
+				printf("Your ans is correct..You have won 80,000 rupees.\n\n");
+				wonMoney+= 40000;
+			}
+			else
+			{
+				printf("sorry, the correct answer is ASSAM. you are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}
+			
+		}
+		else if(z==3 && audience_poll != 0)
+		{
+			audience_poll=0;
+			printf("1. SIKKIM=30%\n2. MEGHALAYA=13%\n3. ARUNACHAL PRADESH=15%\n4. ASSAM=42% \n\n");
+			printf("\tEnter the option no.");
+			scanf("%d",&an);
+			if(an==4)
+			{
+				printf("Your ans is correct..You have won 80,000 rupees.\n\n");
+				wonMoney +=40000;}
+		  	else
+			{
+				printf("sorry, the correct answer is ASSAM. \n\nyou are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}	
+		}
+		
+		else
+		{
+			printf("You have already Used This Lifeline\n");
+			goto returnq5;
+		}
+}
+else
+{	
+	{
+	printf("\tEnter the option no.");}
+	scanf("%d",&an);
+	if(an==4)		
+		{
+		printf("Your ans is correct..You have won 80,000 rupees.\n\n");
+		wonMoney += 40000;
+		}
+	else
+		{
+		printf("Sorry correct answer is ASSAM.You are out of game.");
+		printf("You Won %d",checkpoint);
+		exit(0);
+		}
+}
+		printf(" Q.6 WH0 BECAME THE FIRST INDIAN TO SCORE A CENTURY BEFORE LUNCH IN THE OPENING SESSION OF A TEST MATCH In JUNE 2018? \n");
+		printf("1.LOKESH RAHUL\n2.VIRAT KOHLI\n3.ROHIT SHARMA\n4.SHIKHAR DHAWAN\n\n");
+		if(fifty_fifty==1&&audience_poll==1&&expert_advice==1)
+		printf("You have all three lifelines left.\n");
+		else if(fifty_fifty==1&&audience_poll==1&&expert_advice==0)
+		printf("You have 2 lifelines left(fifty fifty and audience poll0.\n");
+		else if(fifty_fifty==1&&audience_poll==0&&expert_advice==1)
+		printf("You have 2 lifelines left(fifity fifty and expert advice).\n");
+		else if(fifty_fifty==1&&audience_poll==0&&expert_advice==0)
+		printf("You have 1 lifelines left(fifty fifty).\n");
+		else if(fifty_fifty==0&&audience_poll==1&&expert_advice==1)
+		printf("You have 2 lifelines left(audiernce poll and expert advice).\n");
+		else if(fifty_fifty==0&&audience_poll==1&&expert_advice==0)
+		printf("You have 1 lifelines left(audience poll).\n");
+		else if(fifty_fifty==0&&audience_poll==0&&expert_advice==1)
+		printf("You have 1 lifelines left(expert advice).\n");
+		else
+		printf("You have no lifelines left.\n");
+		y=0;
+		if(fifty_fifty !=0 || audience_poll!=0 || expert_advice!=0)
+		{	
+		printf("do u want to use anylife line,if yes please enter 1 otherwise any other no\n");
+		scanf("%d",&y);
+		}
+		if(y==1)
+		{
+		returnq6: printf("which lifeline do u want to choose?press 1 for fifty fifty,2 for expert advice,3 for audience poll\n");
+		scanf("%d",&z);
+		if(z==1 && fifty_fifty != 0)
+		{
+			fifty_fifty=0;
+			printf("2.VIRAT KOHLI \n4.SHIKHAR DHAWAN\n\n");
+			printf("\tEnter the option no.");
+			scanf("%d",&an);
+			if(an==4)
+			{	
+				printf("Your ans is correct..You have won 1,60,000 rupees.\n\n");
+				wonMoney += 80000;
+			}
+			else
+			{
+				printf("sorry, the correct answer is SHIKHAR DHAWAN. \n\nyou are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}
+			
+		}
+		else if(z==2 && expert_advice !=0)
+		{
+			expert_advice=0;
+			printf("i think correct ans. is SHIKHAR DHAWAN, but not sure\n\n");
+			printf("\tEnter the option no.\n");
+			scanf("%d",&an);
+			if(an==4)			
+			{
+				printf("Your ans is correct..You have won 1,60,000 rupees.\n\n");
+				wonMoney+= 80000;
+			}
+			else
+			{
+				printf("sorry, the correct answer is SHIKHAR DHAWAN. you are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}
+			
+		}
+		else if(z==3 && audience_poll != 0)
+		{
+			audience_poll=0;
+			printf("1. LOKESH RAHUL=12%\n2. VIRAT KOHLI=33%\n3. ROHIT SHARMA=15%\n4. SHIKHAR DHAWAN=42% \n\n");
+			printf("\tEnter the option no.");
+			scanf("%d",&an);
+			if(an==4)
+			{
+				printf("Your ans is correct..You have won 1,60,000 rupees.\n\n");
+				wonMoney +=80000;}
+		  	else
+			{
+				printf("sorry, the correct answer is SHIKHAR DHAWAN. \n\nyou are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+				}	
+		}
+		
+		else
+		{
+			printf("You have already Used This Lifeline\n");
+			goto returnq6;
+		}
+}
+else
+{	
+	{
+	printf("\tEnter the option no.");}
+	scanf("%d",&an);
+	if(an==4)		
+		{
+		printf("Your ans is correct..You have won 1,60,000 rupees.\n\n");
+		wonMoney += 80000;
+		}
+	else
+		{
+		printf("Sorry correct answer is SHIKHAR DHAWAN.You are out of game.");
+		printf("You Won %d",checkpoint);
+		exit(0);
+		}
+}
+		printf(" Q.7 WHICH IS THE ONLY DISTRICT IN INDIA THAT SHARE ITS BOUNDARY WITH FOUR STATES? \n");
+		printf("1.EAST SINGHBHUM\n2.KOTA\n3.SONBHADARA\n4.SAHARANPUR\n\n");
+		if(fifty_fifty==1&&audience_poll==1&&expert_advice==1)
+		printf("You have all three lifelines left.\n");
+		else if(fifty_fifty==1&&audience_poll==1&&expert_advice==0)
+		printf("You have 2 lifelines left(fifty fifty and audience poll0.\n");
+		else if(fifty_fifty==1&&audience_poll==0&&expert_advice==1)
+		printf("You have 2 lifelines left(fifity fifty and expert advice).\n");
+		else if(fifty_fifty==1&&audience_poll==0&&expert_advice==0)
+		printf("You have 1 lifelines left(fifty fifty).\n");
+		else if(fifty_fifty==0&&audience_poll==1&&expert_advice==1)
+		printf("You have 2 lifelines left(audiernce poll and expert advice).\n");
+		else if(fifty_fifty==0&&audience_poll==1&&expert_advice==0)
+		printf("You have 1 lifelines left(audience poll).\n");
+		else if(fifty_fifty==0&&audience_poll==0&&expert_advice==1)
+		printf("You have 1 lifelines left(expert advice).\n");
+		else
+		printf("You have no lifelines left.\n");
+		y=0;
+		if(fifty_fifty !=0 || audience_poll!=0 || expert_advice!=0)
+		{	
+		printf("do u want to use anylife line,if yes please enter 1 otherwise any other no\n");
+		scanf("%d",&y);
+		}
+		if(y==1)
+		{
+		returnq7: printf("which lifeline do u want to choose?press 1 for fifty fifty,2 for expert advice,3 for audience poll\n");
+		scanf("%d",&z);
+		if(z==1 && fifty_fifty != 0)
+		{
+			fifty_fifty=0;
+			printf("2.KOTA \n3.SONBHADARA\n\n");
+			printf("\tEnter the option no.");
+			scanf("%d",&an);
+			if(an==3)
+			{	
+				printf("Your ans is correct..You have won 3,20,000 rupees.\n\n");
+				wonMoney += 160000;
+			}
+			else
+			{
+				printf("sorry, the correct answer is SONBHADRA. \n\nyou are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}
+			
+		}
+		else if(z==2 && expert_advice !=0)
+		{
+			expert_advice=0;
+			printf("i think correct ans. is SONBHADRA, but not sure\n\n");
+			printf("\tEnter the option no.\n");
+			scanf("%d",&an);
+			if(an==3)			
+			{
+				printf("Your ans is correct..You have won 3,20,000 rupees.\n\n");
+				wonMoney+= 160000;
+			}
+			else
+			{
+				printf("sorry, the correct answer is SONBHADARA. you are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}
+			
+		}
+		else if(z==3 && audience_poll != 0)
+		{
+			audience_poll=0;
+			printf("1. EAST SINGHBUM=10%\n2. KOTA=31%\n3. SONBHADARA=47%\n4. SAHARANPUR=12% \n\n");
+			printf("\tEnter the option no.");
+			scanf("%d",&an);
+			if(an==3)
+			{
+				printf("Your ans is correct..You have won 3,20,000 rupees.\n\n");
+				wonMoney +=160000;}
+		  	else
+			{
+				printf("sorry, the correct answer is SONBHADARA. \n\nyou are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}	
+		}
+		
+		else
+		{
+			printf("You have already Used This Lifeline\n");
+			goto returnq7;
+		}
+}
+else
+{	
+	{
+	printf("\tEnter the option no.");}
+	scanf("%d",&an);
+	if(an==3)		
+		{
+		printf("Your ans is correct..You have won 3,20,000 rupees.\n\n");
+		wonMoney += 160000;
+		}
+	else
+		{
+		printf("Sorry correct answer is SONBHADARA.You are out of game.");
+		printf("You Won %d",checkpoint);
+		exit(0);
+		}
+}
+		printf(" Q.8 WHO AMONG THESE CONQURERS WAS THE FIRST TO INVADE INDIA? \n");
+		printf("1.BABAR\n2.TEMUR\n3.MOHD. GUARI \n4.NADIR SHAH\n\n");
+		if(fifty_fifty==1&&audience_poll==1&&expert_advice==1)
+		printf("You have all three lifelines left.\n");
+		else if(fifty_fifty==1&&audience_poll==1&&expert_advice==0)
+		printf("You have 2 lifelines left(fifty fifty and audience poll0.\n");
+		else if(fifty_fifty==1&&audience_poll==0&&expert_advice==1)
+		printf("You have 2 lifelines left(fifity fifty and expert advice).\n");
+		else if(fifty_fifty==1&&audience_poll==0&&expert_advice==0)
+		printf("You have 1 lifelines left(fifty fifty).\n");
+		else if(fifty_fifty==0&&audience_poll==1&&expert_advice==1)
+		printf("You have 2 lifelines left(audiernce poll and expert advice).\n");
+		else if(fifty_fifty==0&&audience_poll==1&&expert_advice==0)
+		printf("You have 1 lifelines left(audience poll).\n");
+		else if(fifty_fifty==0&&audience_poll==0&&expert_advice==1)
+		printf("You have 1 lifelines left(expert advice).\n");
+		else
+		printf("You have no lifelines left.\n");
+		y=0;
+		checkpoint+=300000;
+		if(fifty_fifty !=0 || audience_poll!=0 || expert_advice!=0)
+		{	
+		printf("do u want to use anylife line,if yes please enter 1 otherwise any other no\n");
+		scanf("%d",&y);
+		}
+
+		if(y==1)
+		{
+		returnq8: printf("which lifeline do u want to choose?press 1 for fifty fifty,2 for expert advice,3 for audience poll\n");
+		scanf("%d",&z);
+		if(z==1 && fifty_fifty != 0)
+		{
+			fifty_fifty=0;
+			printf("1.BABAR \n2.TEMUR\n\n");
+			printf("\tEnter the option no.");
+			scanf("%d",&an);
+			if(an==2)
+			{	
+				printf("Your ans is correct..You have won 6,40,000 rupees.\n\n");
+				wonMoney += 320000;
+			}
+			else
+			{
+				printf("sorry, the correct answer is TEMUR. \n\nyou are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}
+			
+		}
+		else if(z==2 && expert_advice !=0)
+		{
+			expert_advice=0;
+			printf("i think correct ans. is TEMUR, but not sure\n\n");
+			printf("\tEnter the option no.");
+			scanf("%d",&an);
+			if(an==2)			
+			{
+				printf("Your ans is correct..You have won 6,40,000 rupees.\n\n");
+				wonMoney+= 320000;
+			}
+			else
+			{
+				printf("sorry, the correct answer is TEMUR. you are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}
+			
+		}
+		else if(z==3 && audience_poll != 0)
+		{
+			audience_poll=0;
+			printf("1. BABAR=28%\n2. TEMUR=51%\n3. MOHD. GAURI=17%\n4. NADIR SHAH=4% \n\n");
+			printf("\tEnter the option no.");
+			scanf("%d",&an);
+			if(an==2)
+			{
+				printf("Your ans is correct..You have won 6,40,000 rupees.\n\n");
+				wonMoney +=320000;}
+		  	else
+			{
+				printf("sorry, the correct answer is TEMUR. \n\nyou are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}	
+		}
+		
+		else
+		{
+			printf("You have already Used This Lifeline\n");
+			goto returnq8;
+		}
+}
+else
+{	
+	{
+	printf("\tEnter the option no.");}
+	scanf("%d",&an);
+	if(an==2)		
+		{
+		printf("Your ans is correct..You have won 6,40,000 rupees.\n\n");
+		wonMoney += 320000;
+		}
+	else
+		{
+		printf("Sorry correct answer is TEMUR.You are out of game.");
+		printf("You Won %d",checkpoint);
+		exit(0);
+		}
+}
+		printf(" Q.9 NAME OF BORDER BETWEEN INDIA AND CHINA ? \n");
+		printf("1.McMOHAN LINE\n2.DURAND LINE\n3.PALK STRAIT\n4.RADOLIFF LINE\n\n");
+		if(fifty_fifty==1&&audience_poll==1&&expert_advice==1)
+		printf("You have all three lifelines left.\n");
+		else if(fifty_fifty==1&&audience_poll==1&&expert_advice==0)
+		printf("You have 2 lifelines left(fifty fifty and audience poll0.\n");
+		else if(fifty_fifty==1&&audience_poll==0&&expert_advice==1)
+		printf("You have 2 lifelines left(fifity fifty and expert advice).\n");
+		else if(fifty_fifty==1&&audience_poll==0&&expert_advice==0)
+		printf("You have 1 lifelines left(fifty fifty).\n");
+		else if(fifty_fifty==0&&audience_poll==1&&expert_advice==1)
+		printf("You have 2 lifelines left(audiernce poll and expert advice).\n");
+		else if(fifty_fifty==0&&audience_poll==1&&expert_advice==0)
+		printf("You have 1 lifelines left(audience poll).\n");
+		else if(fifty_fifty==0&&audience_poll==0&&expert_advice==1)
+		printf("You have 1 lifelines left(expert advice).\n");
+else
+		printf("You have no lifelines left.\n");
+		y=0;
+		if(fifty_fifty !=0 || audience_poll!=0 || expert_advice!=0)
+		{	
+		printf("do u want to use anylife line,if yes please enter 1 otherwise any other no\n");
+		scanf("%d",&y);
+		}
+		if(y==1)
+		{
+		returnq9: printf("which lifeline do u want to choose?press 1 for fifty fifty,2 for expert advice,3 for audience poll\n");
+		scanf("%d",&z);
+		if(z==1 && fifty_fifty != 0)
+		{
+			fifty_fifty=0;
+			printf("1.McMOHAN LINE \n3.PALK STRAIT\n\n");
+			printf("\tEnter the option no.");
+			scanf("%d",&an);
+			if(an==1)
+			{	
+				printf("Your ans is correct..You have won 12,50,000 rupees.\n\n");
+				wonMoney += 610000;
+			}
+			else
+			{
+				printf("sorry, the correct answer is McMOHAN LINE. \n\nyou are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}
+			
+		}
+		else if(z==2 && expert_advice !=0)
+		{
+			expert_advice=0;
+			printf("i think correct ans. is McMOHAN LINE, but not sure\n\n");
+			printf("\tEnter the option no.\n");
+			scanf("%d",&an);
+			if(an==1)			
+			{
+				printf("Your ans is correct..You have won 12,50,000 rupees.\n\n");
+				wonMoney+= 610000;
+			}
+			else
+			{
+				printf("sorry, the correct answer is McMOHAN LINE. you are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}
+			
+		}
+		else if(z==3 && audience_poll != 0)
+		{
+			audience_poll=0;
+			printf("1. McMOHAN LINE=48%\n2. DURAND LINE=11%\n3. PALK STRAIT=27%\n4. RADOLIFF LINE=14% \n\n");
+			printf("\tEnter the option no.");
+			scanf("%d",&an);
+			if(an==1)
+			{
+				printf("Your ans is correct..You have won 12,50,000 rupees.\n\n");
+				wonMoney +=610000;}
+		  	else
+			{
+				printf("sorry, the correct answer is McMOHAN LINE. \n\nyou are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}	
+		}
+		
+		else
+		{
+			printf("You have already Used This Lifeline\n");
+			goto returnq9;
+		}
+}
+else
+{	
+	{
+	printf("\tEnter the option no.");}
+	scanf("%d",&an);
+	if(an==1)		
+		{
+		printf("Your ans is correct..You have won 12,50,000 rupees.\n\n");
+		wonMoney += 610000;
+		}
+	else
+		{
+		printf("Sorry correct answer is McMOHAN LINE.You are out of game.");
+		printf("You Won %d",checkpoint);
+		exit(0);
+		}
+}
+		printf(" Q.10 WHEN DID FIRST COMMONWEALTH GAMES WERE HELD ?\n");
+		printf("1.1930 \n2.1931\n3.1932 \n4.1933\n\n");	
+		if(fifty_fifty==1&&audience_poll==1&&expert_advice==1)
+		printf("You have all three lifelines left.\n");
+		else if(fifty_fifty==1&&audience_poll==1&&expert_advice==0)
+		printf("You have 2 lifelines left(fifty fifty and audience poll0.\n");
+		else if(fifty_fifty==1&&audience_poll==0&&expert_advice==1)
+		printf("You have 2 lifelines left(fifity fifty and expert advice).\n");
+		else if(fifty_fifty==1&&audience_poll==0&&expert_advice==0)
+		printf("You have 1 lifelines left(fifty fifty).\n");
+		else if(fifty_fifty==0&&audience_poll==1&&expert_advice==1)
+		printf("You have 2 lifelines left(audiernce poll and expert advice).\n");
+		else if(fifty_fifty==0&&audience_poll==1&&expert_advice==0)
+		printf("You have 1 lifelines left(audience poll).\n");
+		else if(fifty_fifty==0&&audience_poll==0&&expert_advice==1)
+		printf("You have 1 lifelines left(expert advice).\n");
+		else
+		printf("You have no lifelines left.\n");
+		y=0;
+		if(fifty_fifty !=0 || audience_poll!=0 || expert_advice!=0)
+		{	
+		printf("do u want to use anylife line,if yes please enter 1 otherwise any other no\n");
+		scanf("%d",&y);
+		}
+		if(y==1)
+		{
+		returnq10: printf("which lifeline do u want to choose?press 1 for fifty fifty,2 for expert advice,3 for audience poll\n");
+		scanf("%d",&z);
+		if(z==1 && fifty_fifty != 0)
+		{
+			fifty_fifty=0;
+			printf("1.1930 \n3.1932\n\n");
+			printf("\tEnter the option no.");
+			scanf("%d",&an);
+			if(an==1)
+			{	
+				printf("Your ans is correct..You have won 25,00,000 rupees.\n\n");
+				wonMoney += 1250000;
+			}
+			else
+			{
+				printf("sorry, the correct answer is 1930. \n\nyou are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}
+			
+		}
+		else if(z==2 && expert_advice !=0)
+		{
+			expert_advice=0;
+			printf("i think correct ans. is 1930, but not sure\n\n");
+			printf("\tEnter the option no.\n");
+			scanf("%d",&an);
+			if(an==1)			
+			{
+				printf("Your ans is correct..You have won 25,00,000 rupees.\n\n");
+				wonMoney+= 1250000;
+			}
+			else
+			{
+				printf("sorry, the correct answer is 1930. you are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}
+			
+		}
+		else if(z==3 && audience_poll != 0)
+		{
+			audience_poll=0;
+			printf("1. 1930=48%\n2. 1931=11%\n3. 1932=27%\n4. 1933=14% \n\n");
+			printf("\tEnter the option no.");
+			scanf("%d",&an);
+			if(an==1)
+			{
+				printf("Your ans is correct..You have won 25,00,000 rupees.\n\n");
+				wonMoney +=1250000;}
+		  	else
+			{
+				printf("sorry, the correct answer is 1930. \n\nyou are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}	
+		}
+		
+		else
+		{
+			printf("You have already Used This Lifeline\n");
+			goto returnq10;
+		}
+}
+else
+{	
+	{
+	printf("\tEnter the option no.");}
+	scanf("%d",&an);
+	if(an==1)		
+		{
+		printf("Your ans is correct..You have won 25,00,000 rupees.\n\n");
+		wonMoney += 1250000;
+		}
+	else
+		{
+		printf("Sorry correct answer is 1930.You are out of game.");
+		printf("You Won %d",checkpoint);
+		exit(0);
+		}
+}
+		printf(" Q.11 IN MAHABHARATA WHO IS THE SON OF GHATOCHKACH ?\n");
+		printf("1.VASUKI \n2.DURYODHAN\n3.BARBARIK \n4.BHEEM\n\n");	
+		if(fifty_fifty==1&&audience_poll==1&&expert_advice==1)
+		printf("You have all three lifelines left.\n");
+		else if(fifty_fifty==1&&audience_poll==1&&expert_advice==0)
+		printf("You have 2 lifelines left(fifty fifty and audience poll0.\n");
+		else if(fifty_fifty==1&&audience_poll==0&&expert_advice==1)
+		printf("You have 2 lifelines left(fifity fifty and expert advice).\n");
+		else if(fifty_fifty==1&&audience_poll==0&&expert_advice==0)
+		printf("You have 1 lifelines left(fifty fifty).\n");
+		else if(fifty_fifty==0&&audience_poll==1&&expert_advice==1)
+		printf("You have 2 lifelines left(audiernce poll and expert advice).\n");
+		else if(fifty_fifty==0&&audience_poll==1&&expert_advice==0)
+		printf("You have 1 lifelines left(audience poll).\n");
+		else if(fifty_fifty==0&&audience_poll==0&&expert_advice==1)
+		printf("You have 1 lifelines left(expert advice).\n");
+		else
+		printf("You have no lifelines left.\n");
+		y=0;
+		if(fifty_fifty !=0 || audience_poll!=0 || expert_advice!=0)
+		{	
+		printf("do u want to use anylife line,if yes please enter 1 otherwise any other no\n");
+		scanf("%d",&y);
+		}
+			if(y==1)
+		{
+		returnq11: printf("which lifeline do u want to choose?press 1 for fifty fifty,2 for expert advice,3 for audience poll\n");
+		scanf("%d",&z);
+		if(z==1 && fifty_fifty != 0)
+		{
+			fifty_fifty=0;
+			printf("1.VASUKI \n3.BARBARIK\n\n");
+			printf("\tEnter the option no.");
+			scanf("%d",&an);
+			if(an==3)
+			{	
+				printf("Your ans is correct..You have won 50,00,000 rupees.\n\n");
+				wonMoney += 2500000;
+			}
+			else
+			{
+				printf("sorry, the correct answer is BARBARIK. \n\nyou are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}
+			
+		}
+		else if(z==2 && expert_advice !=0)
+		{
+			expert_advice=0;
+			printf("i think correct ans. is BARBARIK, but not sure\n\n");
+			printf("\tEnter the option no.\n");
+			scanf("%d",&an);
+			if(an==3)			
+			{
+				printf("Your ans is correct..You have won 50,00,000 rupees.\n\n");
+				wonMoney+= 2500000;
+			}
+			else
+			{
+				printf("sorry, the correct answer is BARBARIK. you are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}
+			
+		}
+		else if(z==3 && audience_poll != 0)
+		{
+			audience_poll=0;
+			printf("1. VASUKI=28%\n2. DURYODHAN=21%\n3. BARBARIK=47%\n4. BHEEM=4% \n\n");
+			printf("\tEnter the option no.");
+			scanf("%d",&an);
+			if(an==3)
+			{
+				printf("Your ans is correct..You have won 50,00,000 rupees.\n\n");
+				wonMoney +=2500000;}
+		  	else
+			{
+				printf("sorry, the correct answer is BARBARIK. \n\nyou are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}	
+		}
+		
+		else
+		{
+			printf("You have already Used This Lifeline\n");
+			goto returnq11;
+		}
+}
+else
+{	
+	{
+	printf("\tEnter the option no.");}
+	scanf("%d",&an);
+	if(an==3)		
+		{
+		printf("Your ans is correct..You have won 50,00,000 rupees.\n\n");
+		wonMoney += 2500000;
+		}
+	else
+		{
+		printf("Sorry correct answer is BARBARIK.You are out of game.");
+		printf("You Won %d",checkpoint);
+		exit(0);
+		}
+}
+		printf(" Q.12 WHO IS THE LAST HINDU RULER OF DELHI?\n");
+		printf("1.KRISHAN DEV RAI\n2.PRITHVI RAJ CHAUHAN\n3.ASHOKA \n4.SHIVAJI\n\n");
+		if(fifty_fifty==1&&audience_poll==1&&expert_advice==1)
+		printf("You have all three lifelines left.\n");
+		else if(fifty_fifty==1&&audience_poll==1&&expert_advice==0)
+		printf("You have 2 lifelines left(fifty fifty and audience poll0.\n");
+		else if(fifty_fifty==1&&audience_poll==0&&expert_advice==1)
+		printf("You have 2 lifelines left(fifity fifty and expert advice).\n");
+		else if(fifty_fifty==1&&audience_poll==0&&expert_advice==0)
+		printf("You have 1 lifelines left(fifty fifty).\n");
+		else if(fifty_fifty==0&&audience_poll==1&&expert_advice==1)
+		printf("You have 2 lifelines left(audiernce poll and expert advice).\n");
+		else if(fifty_fifty==0&&audience_poll==1&&expert_advice==0)
+		printf("You have 1 lifelines left(audience poll).\n");
+		else if(fifty_fifty==0&&audience_poll==0&&expert_advice==1)
+		printf("You have 1 lifelines left(expert advice).\n");
+		else
+		printf("You have no lifelines left.\n");
+		y=0;
+		if(fifty_fifty !=0 || audience_poll!=0 || expert_advice!=0)
+		{	
+		printf("do u want to use anylife line,if yes please enter 1 otherwise any other no\n");
+		scanf("%d",&y);
+		}
+		if(y==1)
+		{
+		returnq12: printf("which lifeline do u want to choose? press 1 for fifty fifty,2 for expert advice,3 for audience poll\n");
+		scanf("%d",&z);
+		if(z==1 && fifty_fifty != 0)
+		{
+			fifty_fifty=0;
+			printf("2.PRITHVI RAJ CHAUHAN \n3.ASHOKA\n\n");
+			printf("\tEnter the option no.");
+			scanf("%d",&an);
+			if(an==2)
+			{	
+				printf("Your ans is correct..You have won 1,00,00,000 rupees.\n\n");
+				wonMoney += 5000000;
+			}
+			else
+			{
+				printf("sorry, the correct answer is PRITHVI RAJ CHAUHAN. \n\nyou are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}
+			
+		}
+		else if(z==2 && expert_advice !=0)
+		{
+			expert_advice=0;
+			printf("i think correct ans. is PRITHVI RAJ CHAUHAN, but not sure\n\n");
+			printf("\tEnter the option no.\n");
+			scanf("%d",&an);
+			if(an==2)			
+			{
+				printf("Your ans is correct..You have won 1,00,00,000 rupees.\n\n");
+				wonMoney+= 5000000;
+			}
+			else
+			{
+				printf("sorry, the correct answer is PRITHVI RAJ CHAUHAN. you are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}
+			
+		}
+		else if(z==3 && audience_poll != 0)
+		{
+			audience_poll=0;
+			printf("1. KRISHAN DEV RAI=8%\n2. PRITHVI RAJ CHAUHAN=46%\n3. ASHOKA=27%\n4. SHIVAJI=19% \n\n");
+			printf("\tEnter the option no.");
+			scanf("%d",&an);
+			if(an==2)
+			{
+				printf("Your ans is correct..You have won 1,00,00,000 rupees.\n\n");
+				wonMoney +=5000000;}
+		  	else
+			{
+				printf("sorry, the correct answer is PRITHVI RAJ CHAUHAN. \n\nyou are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}	
+		}
+		
+		else
+		{
+			printf("You have already Used This Lifeline\n");
+			goto returnq12;
+		}
+}
+else
+{
+	{
+	printf("\tEnter the option no.");}
+	scanf("%d",&an);
+	if(an==2)		
+		{
+		printf("Your ans is correct..You have won 1,00,00,000 rupees.\n\n");
+		wonMoney += 5000000;
+		}
+	else
+		{
+		printf("Sorry correct answer is PRITHVI RAJ CHAUHAN.You are out of game.");
+		printf("You Won %d",checkpoint);
+		exit(0);
+		}}
+		printf(" Q.13 TO WHOM IS THE PATRIOTIC SONG 'DE DI HUMEIN AAZADI BINA KHADAG BINA DHAAL' BY KAVI PRADEEP A TRIBUTE?\n");
+		printf("1.BARDOLI KE SARDAR\n2.AZAD HIND FAUJ KE SUBHAS\n3.SHANTIKETAN KE GURUDEV \n4.SABARMATI KE SANT\n\n");
+		if(fifty_fifty==1&&audience_poll==1&&expert_advice==1)
+		printf("You have all three lifelines left.\n");
+		else if(fifty_fifty==1&&audience_poll==1&&expert_advice==0)
+		printf("You have 2 lifelines left(fifty fifty and audience poll0.\n");
+		else if(fifty_fifty==1&&audience_poll==0&&expert_advice==1)
+		printf("You have 2 lifelines left(fifity fifty and expert advice).\n");
+		else if(fifty_fifty==1&&audience_poll==0&&expert_advice==0)
+		printf("You have 1 lifelines left(fifty fifty).\n");
+		else if(fifty_fifty==0&&audience_poll==1&&expert_advice==1)
+		printf("You have 2 lifelines left(audiernce poll and expert advice).\n");
+		else if(fifty_fifty==0&&audience_poll==1&&expert_advice==0)
+		printf("You have 1 lifelines left(audience poll).\n");
+		else if(fifty_fifty==0&&audience_poll==0&&expert_advice==1)
+		printf("You have 1 lifelines left(expert advice).\n");
+		else
+		printf("You have no lifelines left.\n");
+		y=0;
+		if(fifty_fifty !=0 || audience_poll!=0 || expert_advice!=0)
+		{	
+		printf("do u want to use anylife line,if yes please enter 1 otherwise any other no\n");
+		scanf("%d",&y);
+		}
+		if(y==1)
+		{
+		returnq13: printf("which lifeline do u want to choose?press 1 for fifty fifty,2 for expert advice,3 for audience poll\n");
+		scanf("%d",&z);
+		if(z==1 && fifty_fifty != 0)
+		{
+			fifty_fifty=0;
+			printf("1.BARDOLI KE SARDAR \n4.SABARMATI KE SANT\n\n");
+			printf("\tEnter the option no.");
+			scanf("%d",&an);
+			if(an==4)
+			{	
+				printf("Your ans is correct..You have won 3,00,00,000 rupees.\n\n");
+				wonMoney += 20000000;
+			}
+			else
+			{
+				printf("sorry, the correct answer is SABARMATI KE SANT. \n\nyou are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}
+			
+		}
+		else if(z==2 && expert_advice != 0)
+		{
+			expert_advice=0;
+			printf("i think correct ans. is SABARMATI KE SANT, but not sure\n\n");
+			printf("\tEnter the option no.\n");
+			scanf("%d",&an);
+			if(an==4)			
+			{
+				printf("Your ans is correct..You have won 3,00,00,000 rupees.\n\n");
+				wonMoney+= 20000000;
+			}
+			else
+			{
+				printf("sorry, the correct answer is SABARMATI KE SANT. you are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}
+			
+		}
+		else if(z==3 && audience_poll != 0)
+		{
+			audience_poll=0;
+			printf("1. BARDOLI KE SARDAR=8%\n2. AZAD HIND FAUJ KE SUBHAS=19%\n3. SHANTIKETAN KE GURUDEV=27%\n4. SABARMATI KE SANT=46% \n\n");
+			printf("\tEnter the option no.");
+			scanf("%d",&an);
+			if(an==4)
+			{
+				printf("Your ans is correct..You have won 3,00,00,000 rupees.\n\n");
+				wonMoney +=20000000;}
+		  	else
+			{
+				printf("sorry, the correct answer is SABARMATI KE SANT. \n\nyou are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}	
+		}
+		
+		else
+		{
+			printf("You have already Used This Lifeline\n");
+			goto returnq13;
+		}
+}
+else
+{
+	{
+	printf("\tEnter the option no.");}
+	scanf("%d",&an);
+	if(an==4)		
+		{
+		printf("Your ans is correct..You have won 3,00,00,000 rupees.\n\n");
+		wonMoney += 20000000;
+		}
+	else
+		{
+		printf("Sorry correct answer is SABARMATI KE SANT.You are out of game.");
+		printf("You Won %d",checkpoint);
+		exit(0);
+		}
+}
+		printf(" Q.14 IS THIS PROJECT GOOD ?\n");
+		printf("1.NOPS\n2.NOT TOO MUCH\n3.NO \n4.YES\n\n");
+		if(fifty_fifty==1&&audience_poll==1&&expert_advice==1)
+		printf("You have all three lifelines left.\n");
+		else if(fifty_fifty==1&&audience_poll==1&&expert_advice==0)
+		printf("You have 2 lifelines left(fifty fifty and audience poll0.\n");
+		else if(fifty_fifty==1&&audience_poll==0&&expert_advice==1)
+		printf("You have 2 lifelines left(fifity fifty and expert advice).\n");
+		else if(fifty_fifty==1&&audience_poll==0&&expert_advice==0)
+		printf("You have 1 lifelines left(fifty fifty).\n");
+		else if(fifty_fifty==0&&audience_poll==1&&expert_advice==1)
+		printf("You have 2 lifelines left(audiernce poll and expert advice).\n");
+		else if(fifty_fifty==0&&audience_poll==1&&expert_advice==0)
+		printf("You have 1 lifelines left(audience poll).\n");
+		else if(fifty_fifty==0&&audience_poll==0&&expert_advice==1)
+		printf("You have 1 lifelines left(expert advice).\n");
+		else
+		printf("You have no lifelines left.\n");
+		y=0;
+		if(fifty_fifty !=0 || audience_poll!=0 || expert_advice!=0)
+		{	
+		printf("do u want to use anylife line,if yes please enter 1 otherwise any other no\n");
+		scanf("%d",&y);
+		}
+			if(y==1)
+		{
+		returnq14: printf("which lifeline do u want to choose?press 1 for fifty fifty,2 for expert advice,3 for audience poll\n");
+		scanf("%d",&z);
+		if(z==1 && fifty_fifty != 0)
+		{
+			fifty_fifty=0;
+			printf("1.NOPS \n4.YES\n\n");
+			printf("\tEnter the option no.");
+			scanf("%d",&an);
+			if(an==4)
+			{	
+				printf("Your ans is correct..You have won 7,00,00,000 rupees.\n\n");
+				wonMoney += 40000000;
+			}
+			else
+			{
+				printf("sorry, the correct answer is YES. \n\nyou are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}
+			
+		}
+		else if(z==2 && expert_advice != 0)
+		{
+			expert_advice=0;
+			printf("i think correct ans. is YES, but not sure\n\n");
+			printf("\tEnter the option no.");
+			scanf("%d",&an);
+			if(an==4)			
+			{
+				printf("Your ans is correct..You have won 7,00,00,000 rupees.\n\n");
+				wonMoney+= 50000000;
+			}
+			else
+			{
+				printf("sorry, the correct answer is YES. you are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}
+			
+		}
+		else if(z==3 && audience_poll != 0)
+		{
+			audience_poll=0;
+			printf("1. NOPS=0%\n2. NOT SO MUCH=0%\n3. NO=50%\n4. YES=50% \n\n");
+			printf("\tEnter the option no.");
+			scanf("%d",&an);
+			if(an==4)
+			{
+				printf("Your ans is correct..You have won 7,00,00,000 rupees.\n\n");
+				wonMoney +=40000000;}
+		  	else
+			{
+				printf("sorry, the correct answer is YES. \n\nyou are out of the game");
+				printf("You Won %d",checkpoint);
+				exit(0);
+			}	
+		}
+		
+		else
+		{
+			printf("You have already Used This Lifeline\n");
+			goto returnq14;
+		}
+}
+else
+{
+	{
+	printf("\tEnter the option no.");}
+	scanf("%d",&an);
+	if(an==4)		
+		{
+		printf("Your ans is correct..You have won 7,00,00,000 rupees.\n\n");
+		wonMoney += 40000000;
+		}
+	else
+		{
+		printf("Sorry correct answer is YES.You are out of game.");
+		printf("You Won %d",checkpoint);
+		exit(0);
+		}
+}
+}
+	else
+	{
+	printf("As your wish");
+	exit(0);		
+	}
+}
